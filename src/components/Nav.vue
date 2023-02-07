@@ -20,8 +20,11 @@
 export default {
     name: 'LayoutNav',
     created() {
-        console.log(this.$route);
-        console.log(this.$router);
+    },
+    watch: {
+        $route: function () {
+            console.log('当前路由：' + this.$route.name);
+        }
     },
     methods: {
         goRoute(e) {
